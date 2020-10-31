@@ -32,6 +32,7 @@
     methods:{
       itemClick(index) {
         this.currentIndex = index
+        this.$emit('titleClick', index)
       },
       backClick() {
         this.$router.go(-1)
@@ -42,6 +43,11 @@
 </script>
 
 <style scoped>
+  /* .nav-bar {
+    position: relative;
+    z-index: 8;
+    background-color: #fff;
+  } */
   .title {
     display: flex;
     font-size: 11px;
